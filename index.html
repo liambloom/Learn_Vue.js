@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script><!--This is used for development-->
+	<!--<script src="https://cdn.jsdelivr.net/npm/vue"></script>--><!--This is used for the actuall release-->
+
+</head>
+<body>
+  <div id="content">
+   <h1>List with {{ todos.length }} items</h1>
+    <ol id="mainList">
+      <item 
+        v-for="item in todos"
+        v-bind:todo="item.txt"
+        v-bind:key="item.id">
+      </item>
+      <input v-on:keyup="enterCheck" id="add" type="text" v-model="input">
+    </ol>
+  </div>
+  <script src="app1.js"></script>
+</body>
+</html>
